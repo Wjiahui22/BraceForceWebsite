@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronRight, Shield, Users, FileText, GraduationCap, Video, Mail, ExternalLink } from 'lucide-react';
+import { Shield, Users, FileText, GraduationCap, Video, Mail } from 'lucide-react';
 
 const BraceForceWebsite = () => {
   const [currentPage, setCurrentPage] = useState('home');
