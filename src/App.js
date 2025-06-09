@@ -6,6 +6,7 @@ const BraceForceWebsite = () => {
 
   const navigation = [
     { id: 'home', label: 'Home', icon: Shield },
+    { id: 'project', label: 'Our Project', icon: FileText }, // <-- Add this line
     { id: 'appendices', label: 'Appendices', icon: FileText },
     { id: 'education', label: 'Education', icon: GraduationCap },
     { id: 'engineers', label: 'Engineers', icon: Users },
@@ -66,74 +67,141 @@ const BraceForceWebsite = () => {
         </div>
       </section>
 
-      {/* Individual Project Sections */}
-      <section className="flex items-center gap-12 bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-        <div className="flex-1">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">Project Definition</h2>
-          <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
-            <p className="text-gray-700 text-left">
-              BraceForce is a bracelet that enhance personal safety, educate the user on how to protect themselves from physical attacks, and reduce the anxiety users feel when they leave the safety of their homes. We want to help those who feel targeted, discriminated against, stressed, or unsafe.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-        <div className="flex-1">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">Executive Summary</h2>
-          <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
-            <p className="text-gray-700 text-left">
-              [Your Executive Summary content here]
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="flex items-center gap-12 bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-        <div className="flex-1">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">Users and Requirements</h2>
-          <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
-            <p className="text-gray-700 text-left">
-              [Your Users and Requirements content here]
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-        <div className="flex-1">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">Design Concept and Rationale</h2>
-          <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
-            <p className="text-gray-700 text-left">
-              [Your Design Concept and Rationale content here]
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="flex items-center gap-12 bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-        <div className="flex-1">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">Future Development</h2>
-          <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
-            <p className="text-gray-700 text-left">
-              [Your Future Development content here]
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-        <div className="flex-1">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">Conclusion</h2>
-          <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
-            <p className="text-gray-700 text-left">
-              [Your Conclusion content here]
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* Project Definition Section */}
+      <section className="flex items-center gap-12 bg-white rounded-2xl p-8 shadow-2xl border-4 border-gradient-to-r from-blue-400 via-amber-400 to-pink-400 relative overflow-hidden">
+  <div className="absolute inset-0 pointer-events-none rounded-2xl border-4 border-transparent bg-gradient-to-r from-blue-100/40 via-amber-100/40 to-pink-100/40" />
+  <div className="flex-1 relative z-10">
+    <h2 className="text-4xl font-extrabold text-blue-700 mb-6 flex items-center gap-3">
+      <Shield className="text-amber-500" size={36} />
+      Our Mission
+    </h2>
+    <div className="bg-gradient-to-br from-blue-50 via-white to-amber-50 rounded-lg p-8 min-h-[200px] flex items-center justify-center shadow-lg border border-blue-100">
+      <p className="text-gray-700 text-left text-lg font-medium">
+        BraceForce is a bracelet that enhances personal safety, educates the user on how to protect themselves from physical attacks, and reduces the anxiety users feel when they leave the safety of their homes. We want to help those who feel targeted, discriminated against, stressed, or unsafe.
+      </p>
+    </div>
+  </div>
+</section>
     </div>
   );
+
+  const ProjectPage = () => (
+  <div className="space-y-12">
+    <h1 className="text-4xl font-bold text-center text-gray-800 mb-12">Our Project</h1>
+
+    {/* Introduction Section */}
+    <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+      <div className="flex-1">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+          Introduction
+        </h2>
+        <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
+          <iframe
+            src="/pdfs/Introduction.pdf"
+            title="Introduction PDF"
+            className="w-full h-[600px] rounded-lg border"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* Executive Summary Section */}
+    <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+      <div className="flex-1">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+          Executive Summary
+        </h2>
+        <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
+          <iframe
+            src="/pdfs/ExecutiveSummary.pdf"
+            title="Executive Summary PDF"
+            className="w-full h-[600px] rounded-lg border"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* Users and Requirements */}
+    <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+      <div className="flex-1">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+          Users and Requirements
+        </h2>
+        <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
+          <iframe
+            src="/pdfs/Usersandrequirements.pdf"
+            title="Users and Requirements PDF"
+            className="w-full h-[600px] rounded-lg border"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* Design Concept and Rationale Section */}
+    <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+      <div className="flex-1">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+          Design Concept and Rationale
+        </h2>
+        <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
+          <iframe
+            src="/pdfs/dcandr.pdf"
+            title="Design Concept and Rationale PDF"
+            className="w-full h-[600px] rounded-lg border"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* Future Development Section */}
+    <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+      <div className="flex-1">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+          Future Development
+        </h2>
+        <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
+          <iframe
+            src="/pdfs/futuredevelopments.pdf"
+            title="Future Development PDF"
+            className="w-full h-[600px] rounded-lg border"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* Conclusion Section */}
+    <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+      <div className="flex-1">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+          Conclusion
+        </h2>
+        <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
+          <iframe
+            src="/pdfs/conclusion.pdf"
+            title="Conclusion PDF"
+            className="w-full h-[600px] rounded-lg border"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* References Section */}
+    <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+      <div className="flex-1">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+          References
+        </h2>
+        <div className="bg-gray-50 rounded-lg p-6 min-h-[100px] flex items-center justify-center">
+          <iframe
+            src="/pdfs/references.pdf"
+            title="References PDF"
+            className="w-full h-[600px] rounded-lg border"
+          />
+        </div>
+      </div>
+    </section>
+  </div>
+);
 
   const AppendicesPage = () => (
     <div className="space-y-12">
@@ -145,30 +213,70 @@ const BraceForceWebsite = () => {
           <span className="text-3xl">💡</span> Ideation
         </h2>
         <div className="grid gap-6">
-          <div className="bg-gray-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">Patent Research</h3>
-            <div className="bg-white rounded-md p-4 min-h-[100px] border-2 border-dashed border-gray-200">
-              <p className="text-gray-700 text-left">[Your Patent Research content here]</p>
-            </div>
-          </div>
-          <div className="bg-gray-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">Competitive Benchmarking Research Summary</h3>
-            <div className="bg-white rounded-md p-4 min-h-[100px] border-2 border-dashed border-gray-200">
-              <p className="text-gray-700 text-left">[Your Competitive Benchmarking content here]</p>
-            </div>
-          </div>
-          <div className="bg-gray-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">Need-Finding Research Summary</h3>
-            <div className="bg-white rounded-md p-4 min-h-[100px] border-2 border-dashed border-gray-200">
-              <p className="text-gray-700 text-left">[Your Need-Finding content here]</p>
-            </div>
-          </div>
-          <div className="bg-gray-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">Alternative Matrix</h3>
-            <div className="bg-white rounded-md p-4 min-h-[100px] border-2 border-dashed border-gray-200">
-              <p className="text-gray-700 text-left">[Your Alternative Matrix content here]</p>
-            </div>
-          </div>
+
+  {/* Patent Research as PDF Section */}
+  <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+    <div className="flex-1">
+      <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+        Patent Research
+      </h2>
+      <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
+        <iframe
+          src="/pdfs/C.pdf"
+          title="Patent Research PDF"
+          className="w-full h-[600px] rounded-lg border"
+        />
+      </div>
+    </div>
+  </section>
+
+  {/* Competitive Benchmarking as PDF Section */}
+  <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+    <div className="flex-1">
+      <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+        Competitive Benchmarking Research Summary
+      </h2>
+      <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
+        <iframe
+          src="/pdfs/B.pdf"
+          title="Competitive Benchmarking Research PDF"
+          className="w-full h-[600px] rounded-lg border"
+        />
+      </div>
+    </div>
+  </section>
+
+  {/* Need-Finding as PDF Section */}
+  <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+    <div className="flex-1">
+      <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+        Need Finding Research Summary
+      </h2>
+      <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
+        <iframe
+          src="/pdfs/A.pdf"
+          title="Need Finding Research PDF"
+          className="w-full h-[600px] rounded-lg border"
+        />
+      </div>
+    </div>
+  </section>
+
+  {/* Design Review Summary as PDF Section */}
+  <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+    <div className="flex-1">
+      <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+        Design Review Summary
+      </h2>
+      <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
+        <iframe
+          src="/pdfs/D.pdf"
+          title="Design Review Summary PDF"
+          className="w-full h-[600px] rounded-lg border"
+        />
+      </div>
+    </div>
+  </section>
         </div>
       </section>
 
@@ -178,53 +286,115 @@ const BraceForceWebsite = () => {
           <span className="text-3xl">🔧</span> Project
         </h2>
         <div className="grid gap-6">
-          <div className="bg-gray-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">Alternative Matrix</h3>
-            <div className="bg-white rounded-md p-4 min-h-[100px] border-2 border-dashed border-gray-200">
-              <p className="text-gray-700 text-left">[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.]</p>
+
+          {/* Project Definition as PDF Section */}
+          <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+            <div className="flex-1">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                Project Definition
+              </h2>
+              <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
+                <iframe
+                  src="/pdfs/E.pdf"
+                  title="Project Definition PDF"
+                  className="w-full h-[600px] rounded-lg border"
+                />
+              </div>
             </div>
-          </div>
-          <div className="bg-gray-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">Bill of Material</h3>
-            <div className="bg-white rounded-md p-4 min-h-[100px] border-2 border-dashed border-gray-200">
-              <p className="text-gray-700 text-left">[Your Bill of Material content here]</p>
+          </section>
+
+          {/* Bill of Material as PDF Section */}
+          <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+            <div className="flex-1">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                Bill of Materials
+              </h2>
+              <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
+                <iframe
+                  src="/pdfs/G.pdf"
+                  title="Bill of Materials PDF"
+                  className="w-full h-[600px] rounded-lg border"
+                />
+              </div>
             </div>
-          </div>
-          <div className="bg-gray-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">Ethical Consideration</h3>
-            <div className="bg-white rounded-md p-4 min-h-[100px] border-2 border-dashed border-gray-200">
-              <p className="text-gray-700 text-left">[Your Ethical Consideration content here]</p>
+          </section>
+
+          {/* Ethical Consideration as PDF Section */}
+          <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+            <div className="flex-1">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                Ethical Considerations
+              </h2>
+              <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
+                <iframe
+                  src="/pdfs/F.pdf"
+                  title="Ethical Considerations PDF"
+                  className="w-full h-[600px] rounded-lg border"
+                />
+              </div>
             </div>
-          </div>
-          <div className="bg-gray-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">Final Review Summary</h3>
-            <div className="bg-white rounded-md p-4 min-h-[100px] border-2 border-dashed border-gray-200">
-              <p className="text-gray-700 text-left">[Your Final Review Summary content here]</p>
+          </section>
+
+          {/* Testing Summary as PDF Section */}
+          <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+            <div className="flex-1">
+              <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+                Testing Summary
+              </h2>
+              <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
+                <iframe
+                  src="/pdfs/H.pdf"
+                  title="Testing Summary PDF"
+                  className="w-full h-[600px] rounded-lg border"
+                />
+              </div>
             </div>
-          </div>
+          </section>
+
         </div>
       </section>
 
       {/* Final Product Section */}
       <section className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
-          <span className="text-3xl">🏆</span> Final Product
+  <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center gap-3">
+    <span className="text-3xl">🏆</span> Instructions
+  </h2>
+  <div className="grid gap-6">
+
+    {/* Instructions for Construction as PDF Section */}
+    <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+      <div className="flex-1">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+          Instructions for Construction
         </h2>
-        <div className="grid gap-6">
-          <div className="bg-gray-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">Final Product Testing Summary</h3>
-            <div className="bg-white rounded-md p-4 min-h-[100px] border-2 border-dashed border-gray-200">
-              <p className="text-gray-700 text-left">[Your Final Product Testing Summary content here]</p>
-            </div>
-          </div>
-          <div className="bg-gray-50 rounded-lg p-6">
-            <h3 className="text-lg font-semibold text-gray-800 mb-3">Instruction for Construction or Installation</h3>
-            <div className="bg-white rounded-md p-4 min-h-[100px] border-2 border-dashed border-gray-200">
-              <p className="text-gray-700 text-left">[Your Instruction for Construction or Installation content here]</p>
-            </div>
-          </div>
+        <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
+          <iframe
+            src="/pdfs/I.pdf"
+            title="Instructions for Construction PDF"
+            className="w-full h-[600px] rounded-lg border"
+          />
         </div>
-      </section>
+      </div>
+    </section>
+
+    {/* Instruction for Use as PDF Section */}
+    <section className="flex items-center gap-12 flex-row-reverse bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+      <div className="flex-1">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
+          Instruction for Use
+        </h2>
+        <div className="bg-gray-50 rounded-lg p-6 min-h-[200px] flex items-center justify-center">
+          <iframe
+            src="/pdfs/J.pdf"
+            title="Instruction for Use PDF"
+            className="w-full h-[600px] rounded-lg border"
+          />
+        </div>
+      </div>
+    </section>
+
+  </div>
+</section>
     </div>
   );
 
@@ -439,6 +609,7 @@ const BraceForceWebsite = () => {
   const renderPage = () => {
     switch(currentPage) {
       case 'home': return <HomePage />;
+      case 'project': return <ProjectPage />;
       case 'appendices': return <AppendicesPage />;
       case 'education': return <EducationPage />;
       case 'engineers': return <EngineersPage />;
