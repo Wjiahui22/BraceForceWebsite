@@ -26,7 +26,7 @@ const BraceForceWebsite = () => {
       name: "Elijah Brickman",
       graduationYear: "2028",
       major: "Mechanical Engineering",
-      email: "elijahbrickman2028@northwestern.edu",
+      email: "elijahbrickman2028@u.northwestern.edu",
       funFact: "I like building things and scuba diving",
       image: "/images/elijahbrickman.jpeg"
     },
@@ -34,7 +34,7 @@ const BraceForceWebsite = () => {
       name: "Winnie Chen",
       graduationYear: "2028", 
       major: "Mechanical Engineering",
-      email: "jhwinniec@northwestern.edu",
+      email: "jhwinniec@u.northwestern.edu",
       funFact: "I like capybaras and designing efficient systems",
       image: "/images/Jiahui(Winnie)_Chen_Microelectronics.png"
     },
@@ -42,7 +42,7 @@ const BraceForceWebsite = () => {
       name: "Mateo Liguori",
       graduationYear: "2028",
       major: "Mechanical Engineering",
-      email: "mateoliguori2028@northwestern.edu", 
+      email: "mateoliguori2028@u.northwestern.edu", 
       funFact: "I like coconut water and engineering cars",
       image: "/images/mateoliguori.JPG"
     }
