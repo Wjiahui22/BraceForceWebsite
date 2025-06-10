@@ -27,7 +27,7 @@ const BraceForceWebsite = () => {
       graduationYear: "2028",
       major: "Mechanical Engineering",
       email: "elijahbrickman2028@northwestern.edu",
-      funFact: "I like building things and exploring new technologies",
+      funFact: "I like building things and scuba diving",
       image: "/images/elijahbrickman.jpeg"
     },
     {
