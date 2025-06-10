@@ -43,7 +43,7 @@ const BraceForceWebsite = () => {
       graduationYear: "2028",
       major: "Mechanical Engineering",
       email: "mateoliguori2028@northwestern.edu", 
-      funFact: "I like cocunut water and manufacturing processes",
+      funFact: "I like coconut water and engineering cars",
       image: "/images/mateoliguori.JPG"
     }
   ];
